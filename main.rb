@@ -4,7 +4,7 @@ require_relative 'enumerable'
 class MyList
   include MyEnumerable
 
-  def instantiate(*array)
+  def initialize(*array)
     @list = array
   end
 
@@ -19,4 +19,4 @@ puts(list.all? { |e| e <= 10 })
 
 puts(list.any? { |e| e < 5 })
 
-puts(list.filter { |e| e < 5 })
+puts(list.filter? { |e| e < 5 })
